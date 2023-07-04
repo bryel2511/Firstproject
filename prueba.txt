@@ -1,0 +1,4 @@
+Para añadir el nombre del usuario y el correo se deben usar los siguientes comandos:
+
+git config --global user.name "xxxxx" 
+git config --global user.email "xxxxx"
