@@ -1,4 +1,15 @@
-Para añadir el nombre del usuario y el correo se deben usar los siguientes comandos:
+Para añadir/configurar el nombre del usuario y el correo para trackear
+los commits, se deben usar los siguientes comandos:
 
-git config --global user.name "xxxxx" 
-git config --global user.email "xxxxx"
+-git config --global user.name "xxxxx" 
+-git config --global user.email "xxxxx"
+
+El comando para los logs que ha sufrido un archivo se utiliza: 
+git log xxxx.xxx
+
+Para ver los cambios en especifico de una version a otra:
+git show  xxxx.xxx
+
+
+
+
