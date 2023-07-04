@@ -10,6 +10,6 @@ git log xxxx.xxx
 Para ver los cambios en especifico de una version a otra:
 git show  xxxx.xxx
 
-
-
+Para ver la diferencia entre dos commits en especifico se usará:
+git diff idcommitreciente idcommitantiguo
 
