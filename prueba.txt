@@ -27,7 +27,20 @@ Esto modificará el archivo a la versión del commit seleccionado. Esto se usa p
 si se desea volver a la última versión del archivo (antes de hacer el checkout) que se encuentra en el repositorio, se usa:
 git checkout master xxx.xxx
 
+Repositorios Remotos
 
 Cuando se trabaja con repositorios remotos, la manera de bajarme sus archivos es con el comando:
 git clone url 
-Esto bajará una copia de la rama master a mi directorio de trabajo y crea la base de datos de todos los cambios en mi repositorio local. 
+Esto bajará una copia de la rama master a mi directorio de trabajo y crea la base de datos de todos los cambios en mi repositorio local.
+Cuando se tenga listos los archivos despues de los cambios respectivos se subirá los cambios al repositorio remoto con git push.
+
+Git fetch
+Trae las actualizaciones ejecutadas en el proyecto, pero lo hará al repositorio local ( no afecta los archivos en el directorio).
+Git Merge
+Permite fusionar los cambios que hay en mi repositorio local con mi directorio de trabajo. 
+
+Git Pull
+Otra manera de trabajar los cambios directamente a mi repositorio local y mi directorio de trabajo es con git pull.
+
+
+
