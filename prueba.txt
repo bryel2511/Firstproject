@@ -41,6 +41,14 @@ Permite fusionar los cambios que hay en mi repositorio local con mi directorio d
 
 Git Pull
 Otra manera de trabajar los cambios directamente a mi repositorio local y mi directorio de trabajo es con git pull.
+Notas: 
+-El commit más reciente es denominado "head". 
+-Una manera de omitir el comando "git add ." es usar "git commit -am "xxxx". Esto funcionará para archivos que ya hayan sido agregados a stagin anteriormente.
+
+
+Ramas
+Cuando uno crea una rama, lo que se hace es crear una copia del último commit proveniente del master. Los cambios en esta rama no se verán en ninguna otra.
+ 
 
 
 
