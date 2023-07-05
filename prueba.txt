@@ -26,3 +26,8 @@ git checkout idcommit xxx.xxx
 Esto modificará el archivo a la versión del commit seleccionado. Esto se usa para volver a versiones anteriores
 si se desea volver a la última versión del archivo (antes de hacer el checkout) que se encuentra en el repositorio, se usa:
 git checkout master xxx.xxx
+
+
+Cuando se trabaja con repositorios remotos, la manera de bajarme sus archivos es con el comando:
+git clone url 
+Esto bajará una copia de la rama master a mi directorio de trabajo y crea la base de datos de todos los cambios en mi repositorio local. 
