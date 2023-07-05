@@ -21,4 +21,8 @@ La diferencia entre el hard y el soft, es que el soft sigue manteniendo lo que e
 Para ver cambios especificos que se hicieron en los commits: 
 git log --stat
 
-
+Para revisar el estado de un archivo en un commit anterior, lo puedo hacer usando:
+git checkout idcommit xxx.xxx 
+Esto modificará el archivo a la versión del commit seleccionado. Esto se usa para volver a versiones anteriores
+si se desea volver a la última versión del archivo (antes de hacer el checkout) que se encuentra en el repositorio, se usa:
+git checkout master xxx.xxx
