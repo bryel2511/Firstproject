@@ -47,10 +47,10 @@ Notas:
 
 
 Ramas
-Cuando uno crea una rama, lo que se hace es crear una copia del último commit proveniente de la rama en donde uno se encuentra. 
-Los cambios en esta rama no se verán en ninguna otra.
-
- 
-
+-Cuando uno crea una rama, lo que se hace es crear una copia del último commit proveniente de la rama en donde uno se encuentra. 
+-Los cambios en esta rama no se verán en ninguna otra.
+-Para crear una nueva rama sería: git branch nameBranch
+-Para cambiarse de rama: git checkout nameBranch
+-Cuando se hace un merge, este siempre ocurre en la rama donde se esta actualmente (donde se ejecuta el comando). En otras palabras, donde se encuentre el HEAD.
 
 
