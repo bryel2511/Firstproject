@@ -13,3 +13,9 @@ git show  xxxx.xxx
 Para ver la diferencia entre dos commits en especifico se usará:
 git diff idcommitreciente idcommitantiguo
 
+Para volver a un commit especifico se utiliza el comando: 
+git reset idcommit --hard
+git reset idcommit --soft 
+La diferencia entre el hard y el soft, es que el soft sigue manteniendo lo que esta en stagin
+
+
