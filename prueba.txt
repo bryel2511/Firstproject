@@ -18,4 +18,7 @@ git reset idcommit --hard
 git reset idcommit --soft 
 La diferencia entre el hard y el soft, es que el soft sigue manteniendo lo que esta en stagin
 
+Para ver cambios especificos que se hicieron en los commits: 
+git log --stat
+
 
