@@ -122,3 +122,7 @@ Este comando sólo tendrá efecto en el repositorio local, más no en github. Pa
 git push origin :refs/tags/nameTag
 
 
+Manejo de Ramas
+git show-branch --all
+Comando que me permite ver las ramas existentes y sus respectivos commits recientes
+Una manera de ver más visual la historia del repositorio/proyecto es con: gitk
