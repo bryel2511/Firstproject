@@ -96,3 +96,29 @@ Verificamos que la url se haya guardado:
 Para hacer pull o push se deberá recordar que github cambio algunos terminos usados, entre esos "master" por main. Por lo que los comandos quedarían:
 git push origin main --allow-unrelated-histories (traer la versión del repositorio remoto)
 git push origin master:main (publicar lo que está en mi repositorio remoto). 
+
+Nota:Comando para mostrar mejor los logs - git log --all --graph --decorate --oneline
+
+Alias
+Para comandos largos se pueden crear alias para su manejo. Ej: alias nameOfAlias=" command" 
+alias logresumido="git log --all --graph --decorate --oneline"
+
+Etiquetas (tag) 
+Sirven para "versionar" los commits (v0.1) y así manejar una mejor lectura de los commits del proyecto. 
+
+git tag -a v0.1 -m "UnMensajeDeCualquierCommit" idcommit
+
+Para ver un listado de los tags existentes en nuestro proyecto es: git tag
+Para ver la asociación de los commits con los tags: git show-ref --tags
+ 
+La creacción de tags no se ve reflejada en cambios de git status, pero para mejor manejo de los mismo en GITHUB es conveniente subirlos. Esto se hace con:
+git push origin --tags
+
+Para borrar un tag se usa: 
+git tag -d nameTag 
+Luego de esto se tendrá que hacer un push de los tags
+
+Este comando sólo tendrá efecto en el repositorio local, más no en github. Para borrar el tag de github se usa: 
+git push origin :refs/tags/nameTag
+
+
