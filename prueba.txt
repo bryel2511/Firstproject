@@ -1,5 +1,11 @@
-Para añadir/configurar el nombre del usuario y el correo para trackear
-los commits, se deben usar los siguientes comandos:
+						Curso de GIT & GITHUB
+
+GIT
+Una vez instalado gitbash se procede a realizar las configuraciones necesarias:
+Para mostrar las configuraciones actuales de tu git se usa: 
+git config --list 
+
+Para añadir/configurar el nombre del usuario y el correo para trackear los commits, se deben usar los siguientes comandos:
 
 -git config --global user.name "xxxxx" 
 -git config --global user.email "xxxxx"
@@ -23,12 +29,11 @@ git log --stat
 
 Para revisar el estado de un archivo en un commit anterior, lo puedo hacer usando:
 git checkout idcommit xxx.xxx 
-Esto modificará el archivo a la versión del commit seleccionado. Esto se usa para volver a versiones anteriores
+Esto modificará el archivo a la versión del commit seleccionado. Esto se usa para volver a versiones anteriores.
 si se desea volver a la última versión del archivo (antes de hacer el checkout) que se encuentra en el repositorio, se usa:
 git checkout master xxx.xxx
 
 Repositorios Remotos
-
 Cuando se trabaja con repositorios remotos, la manera de bajarme sus archivos es con el comando:
 git clone url 
 Esto bajará una copia de la rama master a mi directorio de trabajo y crea la base de datos de todos los cambios en mi repositorio local.
@@ -42,7 +47,7 @@ Permite fusionar los cambios que hay en mi repositorio local con mi directorio d
 Git Pull
 Otra manera de trabajar los cambios directamente a mi repositorio local y mi directorio de trabajo es con git pull.
 Notas: 
--El commit más reciente es denominado "head". 
+-El commit más reciente es denominado "head".  
 -Una manera de omitir el comando "git add ." es usar: git commit -am "xxxx". Esto funcionará para archivos que ya hayan sido agregados a stagin anteriormente.
 
 
@@ -53,4 +58,41 @@ Ramas
 -Para cambiarse de rama: git checkout nameBranch
 -Cuando se hace un merge, este siempre ocurre en la rama donde se esta actualmente (donde se ejecuta el comando). En otras palabras, donde se encuentre el HEAD.
 
+Llaves publicas y Privadas 
+-Ambas estan vinculadas matemáticamente, es decir que lo que se cifra con la llave publica sólo lo descifra la llave privada. 
+-No hay problema en compartir la llave publica, el cuidado debe estar con la llave privada. 
+-Aunque hackers puedan capturar un mensaje cifrado con la llave pública y tenga la llave pública, no podrán descifrar el mensaje. 
 
+Crear una llave publica y privada
+Las llaves se crean por persona (correo asociado). 
+Usar el correo con el que tienes una cuenta en github.
+Meter el comando: ssh-keygen -t rsa -b 4096 -C "xxxxx@gmail.com"
+-t: Especifica el algoritmo a usar para crear las llaves. El algoritmo se pone a continuación del espacio.
+-b: Especifica el nivel de complejidad para crear la llave. 
+-C: Especifica el correo al que esta asosiaco la llave.  
+
+Despues de que te indica donde se guardará la llave, te aparecerá un mensaje de configurar una "passphrase" a la llave. Esto es una contraseña adicional
+que se agrega a las llaves que se están generando. Si no deseas crearlas puedes dar enter siendo todo un espacio vacío. 
+
+Luego puedes comprobar la creacción de las llaves en el directorio especificado. El archivo id_rsa en este caso, será tu llave privada, mientras que el archivo id_rsa.pub será tu llave pública. 
+
+Se deberá verificar que el servidor de llaves ssh este funcionando mediante el comando: eval $(ssh-agent -s). El resultado del comando deberá ser tipo: Agent pid xxx
+
+Ahora se deberá agregar la llave privada a tu servidor ssh: ssh-add ~/.ssh/id_rsa
+
+GITHUB
+Lo siguiente que se debe hacer es copiar tu llave publica en github. Puedes abrir tu llave publica en VSCODE para copiarla. 
+Luego nos dirigimos al perfil de github, a la opción settings. Se deberá dar clic en la opción SSH and GPG Keys. Y ahí agregar la llave SSH creada.
+
+Agregar un origin a tu repositorio local
+Una vez creado un repositorio en github podremos vincularlo a nuestro repositorio local mediante: 
+- git remote add origin (URL)
+Para que esto funcione deberás estar ubicado en la ruta de tu repositorio local.
+
+Verificamos que la url se haya guardado:
+- git remote  
+- git remote -v
+
+Para hacer pull o push se deberá recordar que github cambio algunos terminos usados, entre esos "master" por main. Por lo que los comandos quedarían:
+git push origin main --allow-unrelated-histories (traer la versión del repositorio remoto)
+git push origin master:main (publicar lo que está en mi repositorio remoto). 
